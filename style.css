@@ -1,0 +1,48 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s;
+}
+
+/* Light mode background */
+body.light-mode {
+    background-color: #fff;
+}
+
+/* Glassmorphism circle */
+.darkmode-circle {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
+    cursor: pointer;
+    transition: background 0.5s, transform .5s;
+}
+
+.darkmode-circle:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* Light mode circle style */
+body.light-mode .darkmode-circle {
+    background: rgba(0, 0, 0, .5);
+}
+
+body.light-mode .darkmode-circle:hover {
+    background: rgba(0, 0, 0, 1);
+}
